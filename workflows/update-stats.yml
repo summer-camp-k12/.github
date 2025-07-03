@@ -24,7 +24,7 @@ jobs:
       - name: Generate Stats
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ORG_NAME: 你的组织名
+          ORG_NAME: summer-camp-k12
         run: |
           python scripts/generate_stats.py
 
