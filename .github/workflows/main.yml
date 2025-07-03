@@ -23,10 +23,10 @@ jobs:
 
       - name: Generate Stats
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.ORG_PAT }}
           ORG_NAME: summer-camp-k12
         run: |
-          python scripts/generate_stats.py
+          python .github/scripts/generate_stats.py
 
       - name: Commit changes
         run: |
