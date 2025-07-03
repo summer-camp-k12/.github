@@ -28,7 +28,8 @@ for member in members:
 
 stats.sort(key=lambda x: x[1], reverse=True)
 
-with open("README.md", "r", encoding="utf-8") as f:
+readme_path = "profile/README.md" # 修正路径
+with open(readme_path, "r", encoding="utf-8") as f:
     lines = f.readlines()
 
 start = lines.index("| 👤 成员 | 📝 Commits | 🔧 PRs | 🗳️ Issues |\n") + 2
@@ -43,7 +44,7 @@ table = [
 
 lines[start:end] = table
 
-with open("README.md", "w", encoding="utf-8") as f:
+with open(readme_path, "w", encoding="utf-8") as f:
     f.writelines(lines)
 
 print("README.md updated.")
